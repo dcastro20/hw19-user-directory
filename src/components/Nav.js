@@ -7,13 +7,9 @@ function Nav({ handleSearchChange }) {
     <nav className="navbar navbar-expand navbar-light bg-light">
       <div className="navbar-collapse row" id="navbarNav">
         {/* ADD CODE TO CALL THE SEARCHBOX COMPONENT WITH THE CALLBACK PASSED IN AS INPUT ARGUMENT */}
-        <SearchBox>
-          <input
-            placeholder="Search"
-            ref={input => this.search = input}
-          />
-        </SearchBox>
-
+        <SearchBox
+          handleSearchChange={handleSearchChange}
+        />
       </div>
     </nav>
   );

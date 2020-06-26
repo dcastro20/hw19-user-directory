@@ -71,6 +71,7 @@ export default class DataArea extends Component {
 
   handleSearchChange = event => {
     console.log(event.target.value);
+    console.log(API);
     const filter = event.target.value;
     const filteredList = this.state.users.filter(item => {
       // merge data together, then see if user input is anywhere inside
@@ -95,13 +96,12 @@ export default class DataArea extends Component {
     return (
       <>
         {/* ADD THE CODE TO CALL THE NAV COMPONENT WITH THE HANDLE SEARCH CHANGE CALLBACK AS INPUT ARGUMENT  */}
-        <Nav>
-          <input
-            placeholder="Search"
-            ref={input => this.search = input}
-            onChange={this.handleSearchChange}
-          />
-        </Nav>
+        <Nav
+          // <input
+          //   placeholder="Search"
+          //   ref={input => this.search = input}
+          //   onChange={this.handleSearchChange}
+          handleSearchChange={this.handleSearchChange} />
         <div className="data-area">
           <DataTable
             headings={this.headings}

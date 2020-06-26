@@ -23,9 +23,13 @@ function DataTable({ headings, users, handleSort }) {
                   // ADD STYLE FOR WIDTH WITH WIDTH PASSED IN
                   // ADD ONCLICK EVENT TO CALL CALLBACK PASSED IN
                   key={name}
-                  style={{ width: { width } }}
-                  onClick={handleSort}
+                  style={{ width }}
+                  onClick={() => {
+                    handleSort(name.toLowercase())
+                  }
+                  }
                 >
+                  {name}
                   {/* ADD HEADING NAME PASSED IN HERE */}
                   <span className="pointer"></span>
                 </th>
@@ -35,7 +39,7 @@ function DataTable({ headings, users, handleSort }) {
         </thead>
         {/* ADD CODE TO CALL COMPONENT DATABODY PASSING USERS AS INPUT ARGUMENT */}
         <DataBody
-          users
+          users={users}
         />
       </table>
     </div>

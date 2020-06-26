@@ -21,7 +21,7 @@ function DataBody({ users }) {
               <td data-th="Image" className="align-middle">
                 <img
                   // ADD ATTRIBUTE SRC FOR IMAGE
-                  src={picture}
+                  src={picture.thumbnail}
                   alt={"profile image for " + name.first + " " + name.last}
                   className="img-responsive"
                 />
@@ -42,7 +42,7 @@ function DataBody({ users }) {
               </td>
               <td data-th="DOB" className="align-middle">
                 {/* ADD DOB DATE HERE - USING FORMATDATE FUNC */}
-                {formatDate(dob)}
+                {formatDate(dob.date)}
               </td>
             </tr>
           );
