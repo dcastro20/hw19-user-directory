@@ -6,7 +6,7 @@ function Nav({ handleSearchChange }) {
   return (
     <nav className="navbar navbar-expand navbar-light bg-light">
       <div className="navbar-collapse row" id="navbarNav">
-        {this.SearchBox /* ADD CODE TO CALL THE SEARCHBOX COMPONENT WITH THE CALLBACK PASSED IN AS INPUT ARGUMENT */}
+        {/* ADD CODE TO CALL THE SEARCHBOX COMPONENT WITH THE CALLBACK PASSED IN AS INPUT ARGUMENT */}
       </div>
     </nav>
   );

@@ -94,12 +94,13 @@ export default class DataArea extends Component {
   render() {
     return (
       <>
+        {/* ADD THE CODE TO CALL THE NAV COMPONENT WITH THE HANDLE SEARCH CHANGE CALLBACK AS INPUT ARGUMENT  */}
         <input
-          placeholder="Search for..."
+          placeholder="Search"
           ref={input => this.search = input}
           onChange={this.handleSearchChange}
         />
-        {/* ADD THE CODE TO CALL THE NAV COMPONENT WITH THE HANDLE SEARCH CHANGE CALLBACK AS INPUT ARGUMENT  */}
+
         <div className="data-area">
           <DataTable
             headings={this.headings}
