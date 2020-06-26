@@ -15,18 +15,22 @@ function DataTable({ headings, users, handleSort }) {
                 DESTRUCTURE INPUT ARGUMENT TO EXTRACT NAME and WIDTH */}
             {/* THE FOLLOWING RETURN STATEMENT SHOULD BE INSIDE
                 OF .MAP CALLBACK BODY */}
+            {headings.map(({ name, width }) => {
               return (
                 <th
                   className="col"
                   // ADD KEY AND ASSIGN IT WITH NAME PASSED IN
                   // ADD STYLE FOR WIDTH WITH WIDTH PASSED IN
                   // ADD ONCLICK EVENT TO CALL CALLBACK PASSED IN
+                  key={name}
+                //style={width}
+
                 >
                   {/* ADD HEADING NAME PASSED IN HERE */}
                   <span className="pointer"></span>
                 </th>
               );
-            {/* })} */}
+            })}
           </tr>
         </thead>
         {/* ADD CODE TO CALL COMPONENT DATABODY PASSING USERS AS INPUT ARGUMENT */}
